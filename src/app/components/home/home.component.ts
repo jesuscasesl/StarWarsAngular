@@ -23,7 +23,7 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     this.startWars.getFilms()
       .subscribe( ( data: any ) => {
-        this.films = data.results;
+        this.films = data.results.sort((a, b) => parseFloat(a.episode_id) - parseFloat(b.episode_id));;
         this.isLoading = false;
         console.log(this.films);
       }, ( errorService ) => {

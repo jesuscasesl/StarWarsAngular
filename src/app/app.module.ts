@@ -4,14 +4,16 @@ import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './components/header/header.component';
-import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { FilmComponent } from './components/film/film.component';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { CardFilmComponent } from './components/card-film/card-film.component';
 
 import { ROUTES } from './app-routes';
 
 import { StarwarsService } from './services/starwars.service';
+import { LoadingComponent } from './components/loading/loading.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +22,8 @@ import { StarwarsService } from './services/starwars.service';
     FilmComponent,
     HeaderComponent,
     FooterComponent,
+    CardFilmComponent,
+    LoadingComponent,
   ],
   imports: [
     BrowserModule,
