@@ -11,20 +11,24 @@ import { FilmComponent } from './components/film/film.component';
 
 import { ROUTES } from './app-routes';
 
+import { StarwarsService } from './services/starwars.service';
+
 @NgModule({
   declarations: [
     AppComponent,
+    HomeComponent,
+    FilmComponent,
     HeaderComponent,
     FooterComponent,
-    HomeComponent,
-    FilmComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     RouterModule.forRoot( ROUTES, { useHash: true } )
   ],
-  providers: [],
+  providers: [
+    StarwarsService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
