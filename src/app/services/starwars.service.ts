@@ -22,4 +22,8 @@ export class StarwarsService {
     getFilms() {
       return this.getQuery('films');
     }
+
+    getFilm( idFilm: string) {
+      return this.getQuery(`films/${idFilm}`);
+    }
 }

@@ -14,6 +14,7 @@ import { ROUTES } from './app-routes';
 
 import { StarwarsService } from './services/starwars.service';
 import { LoadingComponent } from './components/loading/loading.component';
+import { DetailsFilmComponent } from './components/details-film/details-film.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { LoadingComponent } from './components/loading/loading.component';
     FooterComponent,
     CardFilmComponent,
     LoadingComponent,
+    DetailsFilmComponent,
   ],
   imports: [
     BrowserModule,

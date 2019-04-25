@@ -1,32 +1,39 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 import { StarwarsService } from '../../services/starwars.service';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  selector: 'app-details-film',
+  templateUrl: './details-film.component.html',
+  styleUrls: ['./details-film.component.css']
 })
-export class HomeComponent implements OnInit {
+export class DetailsFilmComponent implements OnInit {
 
-  public films: any[];
+  public film: object;
   public isLoading: boolean;
   public isError: boolean;
   public messageError: string;
+  public idFilm: string;
 
-  constructor( private startWars: StarwarsService ) {
-    this.films = [];
+  constructor(
+    private startWars: StarwarsService,
+    private route: ActivatedRoute
+  ) {
+    this.film = {};
     this.isLoading = true;
     this.isLoading = false;
     this.messageError = '';
   }
 
   ngOnInit() {
-    this.startWars.getFilms()
+    this.idFilm = this.route.snapshot.params['id'];
+    this.startWars.getFilm( this.idFilm )
       .subscribe( ( data: any ) => {
-        this.films = data.results.sort((a, b) => parseFloat(a.episode_id) - parseFloat(b.episode_id));;
+        debugger;
+        this.film = data;
         this.isLoading = false;
-        console.log(this.films);
+        console.log(this.film);
       }, ( errorService ) => {
         this.isError = true;
         this.isLoading = false;
