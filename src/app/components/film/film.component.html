@@ -1,1 +1,7 @@
-<app-details-film></app-details-film>
+<app-loading *ngIf="isLoading">!!!!!!!</app-loading>
+
+<app-details-film
+  *ngIf="film"
+  [film]=film></app-details-film>
+
+<a href="#" routerLink="/home">Back</a>

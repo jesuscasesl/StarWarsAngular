@@ -11,6 +11,12 @@ export class CardFilmComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() { }
+  ngOnInit() {
+    this.getIdFilm();
+  }
+
+  public getIdFilm(): string {
+    return this.film.url.substr(-2,1);
+  }
 
 }

@@ -1,0 +1,6 @@
+<h2>Last five visited</h2>
+<ul *ngIf="arrayLastVisit">
+  <li *ngFor="let visit of arrayLastVisit.reverse()">
+    <span>{{ visit }}</span>
+  </li>
+</ul>

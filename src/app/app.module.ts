@@ -9,13 +9,15 @@ import { FilmComponent } from './components/film/film.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { CardFilmComponent } from './components/card-film/card-film.component';
+import { DetailsFilmComponent } from './components/details-film/details-film.component';
+import { SearchfilmComponent } from './components/searchfilm/searchfilm.component';
+import { ListLastVisitComponent } from './components/list-last-visit/list-last-visit.component';
+import { LoadingComponent } from './components/loading/loading.component';
 
 import { ROUTES } from './app-routes';
 
 import { StarwarsService } from './services/starwars.service';
-import { LoadingComponent } from './components/loading/loading.component';
-import { DetailsFilmComponent } from './components/details-film/details-film.component';
-import { SearchfilmComponent } from './components/searchfilm/searchfilm.component';
+
 
 @NgModule({
   declarations: [
@@ -25,9 +27,10 @@ import { SearchfilmComponent } from './components/searchfilm/searchfilm.componen
     HeaderComponent,
     FooterComponent,
     CardFilmComponent,
-    LoadingComponent,
     DetailsFilmComponent,
     SearchfilmComponent,
+    ListLastVisitComponent,
+    LoadingComponent,
   ],
   imports: [
     BrowserModule,

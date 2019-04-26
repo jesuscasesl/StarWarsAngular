@@ -1,7 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-
-import { StarwarsService } from '../../services/starwars.service';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-details-film',
@@ -10,33 +7,10 @@ import { StarwarsService } from '../../services/starwars.service';
 })
 export class DetailsFilmComponent implements OnInit {
 
-  public film: object;
-  public isLoading: boolean;
-  public isError: boolean;
-  public messageError: string;
-  public idFilm: string;
+  @Input() public film: any;
 
-  constructor(
-    private startWars: StarwarsService,
-    private route: ActivatedRoute
-  ) {
-    this.film = {};
-    this.isLoading = false;
-    this.messageError = '';
-  }
+  constructor( ) { }
 
-  ngOnInit() {
-    this.isLoading = true;
-    this.idFilm = this.route.snapshot.params.id;
-    this.startWars.getFilm( this.idFilm )
-      .subscribe( ( data: any ) => {
-        this.film = data;
-        this.isLoading = false;
-      }, ( errorService ) => {
-        this.isError = true;
-        this.isLoading = false;
-        this.messageError = errorService.error.error.message;
-      });
-  }
+  ngOnInit() { }
 
 }
