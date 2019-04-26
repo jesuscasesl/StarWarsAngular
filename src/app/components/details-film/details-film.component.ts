@@ -21,19 +21,17 @@ export class DetailsFilmComponent implements OnInit {
     private route: ActivatedRoute
   ) {
     this.film = {};
-    this.isLoading = true;
     this.isLoading = false;
     this.messageError = '';
   }
 
   ngOnInit() {
-    this.idFilm = this.route.snapshot.params['id'];
+    this.isLoading = true;
+    this.idFilm = this.route.snapshot.params.id;
     this.startWars.getFilm( this.idFilm )
       .subscribe( ( data: any ) => {
-        debugger;
         this.film = data;
         this.isLoading = false;
-        console.log(this.film);
       }, ( errorService ) => {
         this.isError = true;
         this.isLoading = false;

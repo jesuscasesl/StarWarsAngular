@@ -1,3 +1,21 @@
+<app-searchfilm (searchFilm)="searchFilm($event)"></app-searchfilm>
+
+
+
+=====
+
+
+
+<a href="#" (click)="showAllFilm()">Show All Film</a>
+
+<a href="#" (click)="resetAllFilm()">Reset Film</a>
+
+
+
+=====
+
+
+
 <app-loading *ngIf="isLoading"></app-loading>
 
 <ng-container *ngIf="!isLoading">

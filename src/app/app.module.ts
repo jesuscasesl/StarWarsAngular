@@ -15,6 +15,7 @@ import { ROUTES } from './app-routes';
 import { StarwarsService } from './services/starwars.service';
 import { LoadingComponent } from './components/loading/loading.component';
 import { DetailsFilmComponent } from './components/details-film/details-film.component';
+import { SearchfilmComponent } from './components/searchfilm/searchfilm.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { DetailsFilmComponent } from './components/details-film/details-film.com
     CardFilmComponent,
     LoadingComponent,
     DetailsFilmComponent,
+    SearchfilmComponent,
   ],
   imports: [
     BrowserModule,

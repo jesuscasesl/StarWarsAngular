@@ -16,12 +16,22 @@ export class HomeComponent implements OnInit {
 
   constructor( private startWars: StarwarsService ) {
     this.films = [];
-    this.isLoading = true;
     this.isLoading = false;
     this.messageError = '';
   }
 
-  ngOnInit() {
+  ngOnInit() { }
+
+  public resetAllFilm() {
+    this.films = [];
+  }
+
+  public showAllFilm() {
+    this.getAllFilm();
+  }
+
+  public getAllFilm() {
+    this.isLoading = true;
     this.startWars.getFilms()
       .subscribe( ( data: any ) => {
         this.films = data.results.sort((a, b) => parseFloat(a.episode_id) - parseFloat(b.episode_id));;
@@ -32,6 +42,27 @@ export class HomeComponent implements OnInit {
         this.isLoading = false;
         this.messageError = errorService.error.error.message;
       });
+  }
+
+  public searchFilm( filmSearch ) {
+    if ( filmSearch.length === 0 ) {
+      this.films = [];
+    } else {
+      this.getSearchFilm( filmSearch );
+    }
+  }
+
+  public getSearchFilm( filmSearch ) {
+    this.isLoading = true;
+    this.startWars.getFilms()
+    .subscribe( ( data: any ) => {
+      this.films = data.results.filter( film => film.title.toUpperCase().includes(filmSearch.toUpperCase()));
+      this.isLoading = false;
+    }, ( errorService ) => {
+      this.isError = true;
+      this.isLoading = false;
+      this.messageError = errorService.error.error.message;
+    });
   }
 
 }
