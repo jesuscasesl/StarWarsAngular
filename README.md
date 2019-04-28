@@ -6,6 +6,14 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 https://jesuscasesl.github.io/StarWarsAngular/#/home
 
+## Install
+
+`git clone https://github.com/jesuscasesl/StarWarsAngular.git`
+
+'cd StarWarsAngular'
+
+`npm i`
+
 ## Server
 
 Run `npm start` for a dev server. Navigate to `http://localhost:4200/`.
