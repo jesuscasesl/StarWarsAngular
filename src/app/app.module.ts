@@ -4,7 +4,6 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 
-
 /* Page */
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -33,6 +32,7 @@ import { PersonService } from './services/person.service';
 
 /* Pipes */
 import { NoimagePipe } from './pipes/noimage.pipe';
+import { CarouselComponent } from './carousel/carousel.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +48,7 @@ import { NoimagePipe } from './pipes/noimage.pipe';
     CardCartelComponent,
     LoadingComponent,
     NoimagePipe,
+    CarouselComponent,
   ],
   imports: [
     BrowserModule,

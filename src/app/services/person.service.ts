@@ -52,7 +52,11 @@ export class PersonService {
     return this.person.length;
   }
 
-  public getAllmg(): string[] {
+  public getAllPerson(): string[] {
+    return this.person.map( p => p.name );
+  }
+
+  public getAllImg(): string[] {
     return this.person.map( p => p.img );
   }
 }

@@ -15,19 +15,17 @@ export class SearchfilmComponent implements OnInit {
 
   ngOnInit() { }
 
-  public searchArtist( film: string ) {
+  public searchArtist( film: string ): void {
     if ( film.length > 1 ) {
-      this.handlerSearchFilm.emit( film );
-    } else if( film.length === 0 ) {
       this.handlerSearchFilm.emit( film );
     }
   }
 
-  public showAllFilm() {
+  public showAllFilm(): void {
     this.handlerShowAllFilm.emit();
   }
 
-  public resetAllFilm() {
+  public resetAllFilm(): void {
     this.handlerResetAllFilm.emit();
   }
 

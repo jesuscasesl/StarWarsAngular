@@ -1,12 +1,9 @@
  .container-film {
-  margin-top: 2rem;
-  
+  margin-top: 2rem; 
 }
-
 .container-btn {
   margin: 2rem 0;
 }
-
 .btn-back {
   color: var(--red);
   border: 2px solid;

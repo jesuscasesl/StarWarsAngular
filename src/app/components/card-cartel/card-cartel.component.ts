@@ -7,18 +7,14 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class CardCartelComponent implements OnInit {
 
-  @Input() public page: string;
   @Input() public film: any;
   @Input() public filmImg: string[];
-
-  public isHome: boolean;
 
   constructor() { }
 
   ngOnInit() { }
 
-  public getYearFull( year ) {
-    const yearFull = new Date( year );
-    return yearFull.getFullYear();
+  public getYearFull( year: string ): number {
+    return new Date( year ).getFullYear();
   }
 }

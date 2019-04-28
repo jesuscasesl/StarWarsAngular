@@ -9,10 +9,12 @@
   grid-template-columns: repeat( 2, 1fr);
 }
 
-
 /* ****** GRID */
 .titleGrid {
   grid-area: titleGrid;
+}
+.carouselGrid {
+  grid-area: carouselGrid;
 }
 .visitGrid {
   grid-area: visitGrid;
@@ -23,10 +25,6 @@
 .cardGrid {
   grid-area: cardGrid;
 }
-.carouselGrid {
-  grid-area: carouselGrid;
-}
-
 
 /* ****** TITLE */
 .home-title {
@@ -52,57 +50,18 @@
   }
 }
 
+/* ****** CAROUSEL */
+.container-carousel {
+  background-color: var(--white);
+  padding: 3rem 0 0;
+}
+
 /* ****** CONTAINERS */
 .home-last, .home-search, .home-card {
   margin-top: 3rem;
 }
 
 
-
-
-
-
-/* ****** CAROUSEL */
-.container-carousel {
-  background-color: var(--white);
-  padding: 3rem 0 0;
-}
-.carousel.slide {
-  width: 800px;
-  margin: auto;
-}
-.container-carousel-img {
-  width: 600px;
-  max-width: 600px;
-  margin: auto;
-}
-.carousel-title {
-  text-align: center;
-  font-size: 2rem;
-  color: var(--blue);
-  margin-bottom: 2rem;
-}
-.carousel-name {
-  color: var(--yellow);
-  font-family: var(--family-starWars);
-  font-size: 2rem;
-  -webkit-text-stroke: 2px black;
-}
-.carousel-img{
-  width: 100%;
-  max-width: 800px;
-  height: 400px;
-}
-
-
-
-
-
-
-/* ****** MEDIAQUERY */
-@media screen and (max-width: 1204px) {
-  
-}
 @media screen and (max-width: 769px) {
   .container-home {
     display: grid;
@@ -114,16 +73,9 @@
       "cardGrid";
     grid-template-columns: 1fr;
   }
-  .carousel-img{
-    width: 100%;
-    object-fit: cover;
-  }
 }
 @media screen and (max-width: 480px) {
   .home-title {
     padding: 1rem;
-  }
-  .carousel-name {
-    font-size: 1rem;
   }
 }

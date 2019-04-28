@@ -1,0 +1,9 @@
+<h2 class="carousel-title">{{ title }}</h2>
+<carousel class="carousel-slider">
+  <slide *ngFor="let person of persons">
+    <img class="carousel-img" src="assets/img/{{ person.img | noimage:imgPersons:'person' }}" [alt]="person.img">
+    <div class="carousel-caption d-md-block">
+      <p class="carousel-name">{{ person.name }}</p>
+    </div>
+  </slide> 
+</carousel>

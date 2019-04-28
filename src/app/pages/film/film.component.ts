@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 
 import { StarwarsService } from '../../services/starwars.service';
 import { FilmService } from '../../services/film.service';
+import { Film } from '../../models/film.model';
 
 @Component({
   selector: 'app-film',
@@ -11,29 +12,28 @@ import { FilmService } from '../../services/film.service';
 })
 export class FilmComponent implements OnInit {
 
-  public film: any;
-  public filmImg: any;
+  public film: Film;
+  public filmImg: string[];
   public isLoading: boolean;
+  public idFilm: string;
   public isError: boolean;
   public messageError: string;
-  public idFilm: string;
 
   constructor(
     private startWars: StarwarsService,
     private filmService: FilmService,
     private route: ActivatedRoute
   ) {
-    this.film = {};
     this.isLoading = false;
     this.messageError = '';
   }
 
   ngOnInit() {
     this.getFilm();
-    this.filmImg = this.filmService.getFilm();
+    this.filmImg = this.filmService.getAllImg();
   }
 
-  public getFilm() {
+  public getFilm(): void {
     this.isLoading = true;
     this.idFilm = this.route.snapshot.params.id;
     this.startWars.getFilm( this.idFilm )
@@ -55,7 +55,11 @@ export class FilmComponent implements OnInit {
       });
   }
 
-  public setVisit( title: object ) {
+  public getCartelFilm( epi: number ): string {
+    return this.filmService.getCartelFilm( epi - 1 );
+  }
+
+  public setVisit( title: string ) {
     let arrLastVisit = [];
     const dataLocal = JSON.parse(localStorage.getItem('lastVisit'));
 
@@ -70,13 +74,4 @@ export class FilmComponent implements OnInit {
     arrLastVisit.push( title );
     localStorage.setItem('lastVisit', JSON.stringify(arrLastVisit));
   }
-
-  public getLength() {
-    return Object.keys(this.film).length !== undefined;
-  }
-
-  public getCartelFilm( epi: number ) {
-    return this.filmService.getFilm()[ epi - 1 ];
-  }
-
 }
