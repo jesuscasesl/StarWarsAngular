@@ -10,7 +10,7 @@ https://jesuscasesl.github.io/StarWarsAngular/#/home
 
 `git clone https://github.com/jesuscasesl/StarWarsAngular.git`
 
-'cd StarWarsAngular'
+`cd StarWarsAngular`
 
 `npm i`
 
