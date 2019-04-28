@@ -1,6 +1,9 @@
-<h2>Last five visited</h2>
-<ul *ngIf="arrayLastVisit">
-  <li *ngFor="let visit of arrayLastVisit.reverse()">
-    <span>{{ visit }}</span>
-  </li>
-</ul>
+<div class="container-visit">
+  <h2 class="visit-title">Last five visited</h2>
+  <ul *ngIf="arrayLastVisit" class="visit-ul">
+    <li *ngFor="let visit of arrayLastVisit.reverse()" class="visit-li">
+      <img class="visit-icon" src="assets/img/icon/darth.png" alt="item">
+      <span class="visit-film">{{ visit }}</span>
+    </li>
+  </ul>
+</div>

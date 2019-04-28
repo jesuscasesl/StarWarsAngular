@@ -1,0 +1,36 @@
+<div class="container-home">
+  <section class="container-carousel carouselGrid">
+    <h2 class="carousel-title">Personajes Principales</h2>
+    <carousel class="carousel-slider">
+      <slide *ngFor="let person of persons">
+        <img class="carousel-img" src="assets/img/{{ person.img | noimage:imgPersons:'person' }}" [alt]="person.img">
+        <div class="carousel-caption d-md-block">
+          <p class="carousel-name">{{ person.name }}</p>
+        </div>
+      </slide> 
+    </carousel>
+  </section>
+  
+  <section class="home-title titleGrid">
+    <h1 class="title-h">A long, long time ago in a galaxy far, far away...</h1>
+  </section>
+
+  <section class="container home-last visitGrid">
+    <app-list-last-visit></app-list-last-visit>
+  </section>
+  
+  <section class="container home-search formGrid">
+    <app-search-film
+    (handlerSearchFilm)="searchFilm($event)"
+    (handlerShowAllFilm)="showAllFilm()"
+    (handlerResetAllFilm)="resetAllFilm()"></app-search-film>
+  </section>
+
+  <section class="home-card cardGrid">
+    <app-show-film
+      [films]="films"
+      [imgFilm]="imgFilm"
+      [isLoading]="isLoading"
+      [countFilms]="countFilms"></app-show-film>
+  </section>
+</div>

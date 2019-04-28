@@ -8,6 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class CardFilmComponent implements OnInit {
 
   @Input() public film: any;
+  @Input() public imgFilm: string[];
 
   constructor() { }
 
@@ -16,7 +17,11 @@ export class CardFilmComponent implements OnInit {
   }
 
   public getIdFilm(): string {
-    return this.film.url.substr(-2,1);
+    const arrSplit = this.film.url.split('/');
+    if ( arrSplit[arrSplit.length] ) {
+      return arrSplit[arrSplit.lenght];
+    } else {
+      return arrSplit[arrSplit.length - 2];
+    }
   }
-
 }

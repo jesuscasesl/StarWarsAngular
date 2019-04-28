@@ -1,0 +1,39 @@
+.container-film-cards {
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  background-color: var(--white);
+  color: var(--black-text);
+}
+.cards-title, .title-count {
+  text-align: center;
+  font-size: 2rem;
+}
+.cards-title {
+  color: var(--blue);
+}
+.container-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.card-item-div {
+  width: 24%;
+  position: relative;
+  margin-bottom: 0.4rem;
+}
+
+@media screen and (max-width: 1204px) {
+  .card-item-div {
+    width: 33%;
+  }
+}
+@media screen and (max-width: 769px) {
+  .card-item-div {
+    width: 49%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .card-item-div {
+    width: 100%;
+  }
+}

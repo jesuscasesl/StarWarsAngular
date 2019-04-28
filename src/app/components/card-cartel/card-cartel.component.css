@@ -1,0 +1,21 @@
+.container-card-cartel {
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+  background-color: var(--white);
+  color: var(--black-text);
+}
+.cartel-img {
+  width: 100%;
+}
+.container-cartel {
+  padding: 1rem;
+}
+.info-title {
+  margin: 2rem 0;
+}
+.info-episode, .info-date, .info-description {
+  margin: 0;
+  margin-bottom: .5rem;
+}
+.info-episode, .info-date {
+  margin-bottom: .5rem;
+}

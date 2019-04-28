@@ -1,0 +1,129 @@
+/* ****** MAIN */
+.container-home {
+  display: grid;
+  grid-template-areas: 
+    "titleGrid titleGrid"
+    "carouselGrid carouselGrid"
+    "visitGrid formGrid"
+    "cardGrid cardGrid";
+  grid-template-columns: repeat( 2, 1fr);
+}
+
+
+/* ****** GRID */
+.titleGrid {
+  grid-area: titleGrid;
+}
+.visitGrid {
+  grid-area: visitGrid;
+}
+.formGrid {
+  grid-area: formGrid;
+}
+.cardGrid {
+  grid-area: cardGrid;
+}
+.carouselGrid {
+  grid-area: carouselGrid;
+}
+
+
+/* ****** TITLE */
+.home-title {
+  text-align: center;
+  padding: 5rem 0;
+  background: url("https://ia.media-imdb.com/images/M/MV5BNjk1NzY5MjIwOV5BMl5BanBnXkFtZTgwNjE2OTc3MDI@._V1.jpg") no-repeat fixed center top #000;
+}
+.title-h {
+  font-size: 2.5rem;
+  font-family: var(--family-away);
+  color: var(--blue);
+  margin: 0;
+  animation: fadein 3s;
+}
+@-webkit-keyframes fadein {
+  from {
+      opacity:0;
+      transform: translateY(10px)
+  }
+  to {
+      opacity:1;
+      transform: translateY(0px)
+  }
+}
+
+/* ****** CONTAINERS */
+.home-last, .home-search, .home-card {
+  margin-top: 3rem;
+}
+
+
+
+
+
+
+/* ****** CAROUSEL */
+.container-carousel {
+  background-color: var(--white);
+  padding: 3rem 0 0;
+}
+.carousel.slide {
+  width: 800px;
+  margin: auto;
+}
+.container-carousel-img {
+  width: 600px;
+  max-width: 600px;
+  margin: auto;
+}
+.carousel-title {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--blue);
+  margin-bottom: 2rem;
+}
+.carousel-name {
+  color: var(--yellow);
+  font-family: var(--family-starWars);
+  font-size: 2rem;
+  -webkit-text-stroke: 2px black;
+}
+.carousel-img{
+  width: 100%;
+  max-width: 800px;
+  height: 400px;
+}
+
+
+
+
+
+
+/* ****** MEDIAQUERY */
+@media screen and (max-width: 1204px) {
+  
+}
+@media screen and (max-width: 769px) {
+  .container-home {
+    display: grid;
+    grid-template-areas: 
+      "titleGrid"
+      "carouselGrid"
+      "visitGrid"
+      "formGrid"
+      "cardGrid";
+    grid-template-columns: 1fr;
+  }
+  .carousel-img{
+    width: 100%;
+    object-fit: cover;
+  }
+}
+@media screen and (max-width: 480px) {
+  .home-title {
+    padding: 1rem;
+  }
+  .carousel-name {
+    font-size: 1rem;
+  }
+}

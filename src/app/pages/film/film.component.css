@@ -1,0 +1,21 @@
+ .container-film {
+  margin-top: 2rem;
+  
+}
+
+.container-btn {
+  margin: 2rem 0;
+}
+
+.btn-back {
+  color: var(--red);
+  border: 2px solid;
+  padding: .5rem 1rem;
+  text-decoration: none;
+  transition: .3s;
+}
+.btn-back:hover {
+  background-color: var(--red);
+  color: var(--white);
+  border-color: transparent;
+}

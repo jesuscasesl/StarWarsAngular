@@ -1,7 +1,4 @@
-<article>
-  <h2>{{ film.title }}</h2>
-  <h3>{{ film.episode_id }}</h3>
-  <h3>{{ film.release_date }}</h3>
-  <p>{{ film.opening_crawl }}</p>
-  <a href="#" routerLink="/film/{{ getIdFilm() }}">More info</a>
-</article>
+<img class="film-img" src="assets/img/{{ film.img | noimage:imgFilm:'film' }}" alt="film">
+<a class="info-link" href="#" routerLink="/film/{{ getIdFilm() }}">
+  <span class="film-span">{{ film.title }} Ep.{{ film.episode }}</span>
+</a>

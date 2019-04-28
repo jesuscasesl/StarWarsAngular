@@ -1,0 +1,79 @@
+/* VAR */
+:root {
+  --black--bg: #181818;
+  
+  --blue: #5ec7f0;
+  --yellow: #ffff00;
+  --yellow-rgba: rgba(255, 255, 0, .8);
+  --green: #008000;
+  --red: #ff0000;
+  --white: #ffffff;
+  --white-aux: #f0f8fe;
+  --white-aux2: #F1F1F0;
+  --black: #000000;
+  --black-aux: #1d1d1d;
+  --black-rgba: rgba(0,0,0,.8);
+  --black-text: #444;
+
+  --family-starWars: startWarsA;
+  --family-away: sans-serif;
+  --family-app: Arial, Helvetica, sans-serif;
+}
+
+
+/* FUENTE */
+@font-face{
+  font-family: startWarsA;
+  src: url('./../assets/font/starWars/Starjedi.ttf') format('truetype');
+}
+
+
+/* GENERAL */
+html {
+  background-color: var(--black--bg);
+  color: var(--white);
+  font-family: var(--family-app);
+  font-size: 16px;
+}
+
+.container {
+  width: 70%;
+  margin: auto;
+}
+@media screen and (max-width: 1204px) {
+  .container {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .container {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .container {
+    width: 95%;
+  }
+}
+@media screen and (max-width: 320px) {
+  .container {
+    width: 100%;
+  }
+}
+
+
+/**/
+/*
+.carousel.slide {
+  width: 100%;
+  margin: auto;
+  max-width: 1000px;
+  overflow: hidden;
+  height: 462px;
+}
+*/
+.carousel.slide {
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+}

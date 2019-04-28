@@ -1,0 +1,13 @@
+<div class="container container-film">
+  <app-loading *ngIf="isLoading"></app-loading>
+  
+  <app-card-cartel
+    *ngIf="!isLoading"
+    class="container-cars"
+    [film]=film
+    [filmImg]="filmImg"></app-card-cartel>
+
+  <div class="container-btn">
+    <a class="btn-back" href="#" routerLink="/home">Back</a>
+  </div>
+</div>

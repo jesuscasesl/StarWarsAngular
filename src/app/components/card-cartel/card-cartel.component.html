@@ -1,0 +1,9 @@
+<div class="container-card-cartel">
+  <img class="cartel-img" src="assets/img/{{ film.img | noimage:filmImg:'film' }}" alt="cartel film">
+  <div class="container-cartel">
+    <h2 class="info-title">{{ film.title }}</h2>
+    <h3 class="info-episode">Episode: {{ film.episode }}</h3>
+    <h3 class="info-date">Year: {{ getYearFull( film.date ) }}</h3>
+    <p class="info-description">{{ film.description }}</p>
+  </div>
+</div>

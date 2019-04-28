@@ -1,0 +1,13 @@
+<div class="container-search">
+  <input
+    class="form-input"
+    type="text"
+    (keyup)="searchArtist(inputSearchText.value)"
+    placeholder="Search film..."
+    #inputSearchText />
+  
+  <div class="form-container-btn">
+    <a class="form-btn form-btn-all" (click)="showAllFilm()">Show All Film</a>
+    <a class="form-btn form-btn-reset" (click)="resetAllFilm()">Reset Film</a>
+  </div>
+</div>
